@@ -1,2 +1,2 @@
-language = "bash"
-run = "/bin/bash"
+language = "c"
+run = "make create && ./main.o"
