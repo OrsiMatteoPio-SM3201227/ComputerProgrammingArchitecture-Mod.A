@@ -1,0 +1,1 @@
+// Data una lista che potrebbe o meno contenere un elemento x, programmare una funzione che prenda un elemento v, e, se x esiste, lo inserisca prima di x, altrimenti non modifichi la lista.
