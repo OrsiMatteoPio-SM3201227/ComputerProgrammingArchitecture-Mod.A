@@ -49,7 +49,7 @@ float potenza_iterativa(int base, int esponente)
     if(esponente < 0)
     {
         for(int i = 0; i > esponente; i = i - 1)
-       {
+        {
             if(i == 0)
             {
                 potenza = 1.0;
