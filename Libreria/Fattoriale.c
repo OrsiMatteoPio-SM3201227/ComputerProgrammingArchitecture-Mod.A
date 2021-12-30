@@ -12,7 +12,7 @@
 // ==============================
 int fattoriale_iterativo(int numero);
 // ==============================
-//      Fattoriale iterativo
+//      Fattoriale ricorsivo
 // ==============================
 int fattoriale_ricorsivo(int numero);
 
@@ -63,7 +63,7 @@ int fattoriale_iterativo(int numero)
     }
 }
 // ==============================
-//      Fattoriale iterativo
+//      Fattoriale ricorsivo
 // ==============================
 int fattoriale_ricorsivo(int numero)
 {    
