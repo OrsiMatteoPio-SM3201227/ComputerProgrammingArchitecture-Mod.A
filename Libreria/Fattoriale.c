@@ -72,11 +72,11 @@ int fattoriale_ricorsivo(int numero)
         printf("Non è possibile calcolare il fattoriale di un numero negativo\n");
         return 0;
     }
-    else if(numero == 0 || numero == 1)
+    else if(numero == 0)
     {
         return 1;
     }
-    else if(numero > 1)
+    else if(numero > 0)
     {
         numero = numero * fattoriale_ricorsivo(numero - 1);
         return numero;
