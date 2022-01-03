@@ -23,7 +23,7 @@ int fattoriale_ricorsivo(int numero);
 // ==============================
 int main(void)
 {
-    // Dichiarazione delle variabili
+    // Dichiarazione della variabile
     int numero;
 
     printf("Inserire il valore del numero: ");

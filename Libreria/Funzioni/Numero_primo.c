@@ -23,7 +23,7 @@ void numeroprimo_ricorsivo(int numero, int divisore);
 // ==============================
 int main(void)
 {
-    // Dichiarazione delle variabili
+    // Dichiarazione della variabile
     int numero;
 
     printf("Inserire il valore del numero: ");
