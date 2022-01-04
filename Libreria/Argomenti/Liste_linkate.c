@@ -139,6 +139,6 @@ void addC(ListaDiElementi * l, int x)
 
 int main()
 {
-     // Data una certa lista inizializzata (con alcuni elementi o completamente vuota), richiamo della funzione addC per aggiungere un nuovo elemento in coda
-     addC(&lista, 8);
+    // Data una certa lista inizializzata (con alcuni elementi o completamente vuota), richiamo della funzione addC per aggiungere un nuovo elemento in coda
+    addC(&lista, 8);
 }
