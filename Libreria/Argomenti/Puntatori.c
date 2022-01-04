@@ -3,6 +3,8 @@
 // ==============================
 //          PUNTATORI
 // ==============================
+//  Dichiarazione di un puntatore
+// ==============================
 void puntatore(void)
 {
     tipo * puntatore;
