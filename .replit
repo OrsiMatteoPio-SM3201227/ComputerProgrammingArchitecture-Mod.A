@@ -1,2 +1,2 @@
 language = "c"
-run = "make create && ./main.o"
+run = "gcc main.c && ./main"

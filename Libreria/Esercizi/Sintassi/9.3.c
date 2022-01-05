@@ -1,0 +1,1 @@
+// Si scriva un programma capace di compiere le 4 operazioni (somma, sottrazione, moltiplicazione e divisione) tra due numeri reali inseriti da tastiera. Dopo che sono stati inseriti i due numeri, detti a e b, il programma dovrà visualizzare i quattro valori a + b, a − b, a * b, a / b. Si ipotizzi che b != 0.
