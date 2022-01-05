@@ -1,0 +1,1 @@
+// Si scriva un programma per calcolare la media aritmetica di una serie di numeri x1, ..., xn inseriti da tastiera, ovvero (*Vedere comando esercizio*). L’introduzione del valore 0 indica il termine del caricamento dei dati.
