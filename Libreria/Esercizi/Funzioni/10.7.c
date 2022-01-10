@@ -8,6 +8,10 @@
 // ==============================
 //           FUNZIONI
 // ==============================
+//        Somma analitica
+// ==============================
+int somma_analitica(int numero);
+// ==============================
 //        Somma iterativa
 // ==============================
 int somma_iterativa(int numero);
@@ -26,12 +30,12 @@ int main(void)
     // Dichiarazione della variabile di controllo - 0 (falso) e 1 (vero)
     int controllo = 1;
 
-    // Richiamo delle funzioni somma iterativa e ricorsiva con test per i numeri da 1 a 100
+    // Richiamo delle funzioni somma analitica, iterativa e ricorsiva con test per i numeri da 1 a 100
     for(int n = 1; n <= 100; n = n + 1)
     {
-        printf("Somma iterativa/ricorsiva fino a %d: %d/%d\n", n, somma_iterativa(n), somma_ricorsiva(n));
+        printf("Somma analitica/iterativa/ricorsiva fino a %d: %d/%d/%d\n", n, somma_analitica(n), somma_iterativa(n), somma_ricorsiva(n));
 
-        if(somma_iterativa(n) != somma_ricorsiva(n))
+        if(somma_analitica(n) != somma_iterativa(n) || somma_analitica(n) != somma_ricorsiva(n))
         {
             controllo = 0;
         }
@@ -40,7 +44,7 @@ int main(void)
     // Risultato del controllo
     if(controllo == 1)
     {
-        printf("Le due funzioni danno sempre lo stesso risultato: vero\n");
+        printf("Le tre funzioni danno sempre lo stesso risultato: vero\n");
     }
     else if(controllo == 0)
     {
@@ -50,6 +54,13 @@ int main(void)
 
 // ==============================
 //           FUNZIONI
+// ==============================
+//        Somma analitica
+// ==============================
+int somma_analitica(int numero)
+{
+    return (numero * (numero + 1)) / 2;
+}
 // ==============================
 //        Somma iterativa
 // ==============================
@@ -68,5 +79,12 @@ int somma_iterativa(int numero)
 // ==============================
 int somma_ricorsiva(int numero)
 {
-    return numero;
+    if(numero == 0)
+    {
+        return 0;
+    }
+    else if(numero > 0)
+    {
+        return numero + somma_ricorsiva(numero - 1);
+    }
 }
