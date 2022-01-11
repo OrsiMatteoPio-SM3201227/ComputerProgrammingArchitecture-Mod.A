@@ -46,19 +46,26 @@ int mcd_iterativo(int a, int b)
 {
     int resto;
 
-    if(b == 0)
+    if(a <= 0 || b < 0)
     {
-        return a;
+        return 0;
     }
-    else if(a != 0 && b != 0)
+    else if(a > 0 && b >= 0)
     {
-        while(b != 0)
+        if(b == 0)
         {
-            resto = a % b;
-            a = b;
-            b = resto;
+            return a;
         }
-        return a;
+        else if(a > 0 && b > 0)
+        {
+            while(b != 0)
+            {
+                resto = a % b;
+                a = b;
+                b = resto;
+            }
+            return a;
+        }
     }
 }
 // ==============================
@@ -66,12 +73,19 @@ int mcd_iterativo(int a, int b)
 // ==============================
 int mcd_ricorsivo(int a, int b)
 {
-    if(b == 0)
+    if(a < 0 || b < 0)
     {
-        return a;
+        return 0;
     }
-    else if(a != 0 && b != 0)
+    else if(a >= 0 && b >= 0)
     {
-        return mcd_ricorsivo(b, a % b);
+        if(b == 0)
+        {
+            return a;
+        }
+        else if(a > 0 && b > 0)
+        {
+            return mcd_ricorsivo(b, a % b);
+        }
     }
 }
