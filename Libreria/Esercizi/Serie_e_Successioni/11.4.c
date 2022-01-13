@@ -1,1 +1,0 @@
-// Si consideri la seguente serie geometrica: (*Vedere comando esercizio*). Verificare che n −→ ∞ la serie tende a π^2 / 8. Nota: Testare la propria implementazione per valori abbastanza grandi di n; anche se questa non è una prova generale, in questo caso il controllo basta per verificare la convergenza.
