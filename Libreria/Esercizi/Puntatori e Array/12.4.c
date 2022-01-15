@@ -1,0 +1,1 @@
+// Si scriva una funzione che prenda in input una variabile int e ne stampi l’indirizzo. Successivamente, si dichiari nel main una variabile, stampandone l’indirizzo e poi passandola alla funzione descritta sopra. I due indirizzi stampati sono gli stessi? Si provi a spiegare quanto osservato, aiutandosi disegnando la memoria del programma realizzato.

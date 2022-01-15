@@ -1,0 +1,1 @@
+// Si scriva un programma che legga due stringhe da tastiera, le concateni in un’unica stringa e stampi la stringa così generata.

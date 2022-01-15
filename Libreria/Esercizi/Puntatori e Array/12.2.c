@@ -1,0 +1,1 @@
+// Si scriva una funzione che data la somma e la differenza delle basi di un trapezio ne calcoli l’area, sapendo che l’altezza è 2 / 3 della base minore. La funzione dovrà avere la segnatura: void area(int somma, int differenza, float* area).

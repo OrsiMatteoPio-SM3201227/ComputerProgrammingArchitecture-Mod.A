@@ -1,0 +1,1 @@
+// Secondo il linguaggio C, a[0] equivale in realtà a scrivere *(a+0). Si scriva un programma che stampi tutti gli elementi di un array usando la seconda notazione.

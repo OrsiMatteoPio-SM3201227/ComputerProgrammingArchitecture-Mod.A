@@ -34,7 +34,8 @@ int main(void)
 
     for(int i = 0; i < dimensione; i = i + 1)
     {
-        a[i] = i + 1;
+        printf("Inserire il %d numero intero dell'array d'indice %d: ", i + 1, i);
+        scanf("%d", &a[i]);
     }
 
     printf("La varianza dell'array è: %f\n", var(a, dimensione));
@@ -49,7 +50,7 @@ int main(void)
 // ==============================
 float var(int a[], int n)
 {
-    int sommatoria = 0;
+    float sommatoria = 0;
     float media = avg(a, n);
 
     for(int i = 0; i < n; i = i + 1)
@@ -63,7 +64,7 @@ float var(int a[], int n)
 // ==============================
 float avg(int a[], int n)
 {
-    int sommatoria = 0;
+    float sommatoria = 0;
 
     for(int i = 0; i < n; i = i + 1)
     {

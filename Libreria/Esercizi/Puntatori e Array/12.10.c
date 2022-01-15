@@ -1,0 +1,1 @@
+// Si scriva una funzione che riceva in input un array di interi e la sua lunghezza, e restituisca 1 se uno degli elementi contenuti è divisore proprio di tutti gli altri, 0 altrimenti.

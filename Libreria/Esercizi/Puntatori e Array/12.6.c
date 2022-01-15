@@ -1,0 +1,1 @@
+// Si scriva una funzione che legga un array di lunghezza arbitraria e determini se l’array contiene solo valori diversi, o no.

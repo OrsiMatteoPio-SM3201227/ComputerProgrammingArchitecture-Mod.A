@@ -1,0 +1,1 @@
+// Si definisce triangolare un numero costituito dalla somma dei primi n numeri interi positivi per un certo n. Ad esempio per Q = 10 si ha Q = 1 + 2 + 3 + 4 da cui n = 4. Si scriva una funzione che chieda all'utente n, ed inserisca in un array di dimensione n i primi n numeri triangolari.

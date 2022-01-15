@@ -1,0 +1,1 @@
+// Si scriva una funzione che prenda un input un array e permuti i suoi elementi in modo che l’array risulti ordinato in maniera crescente.

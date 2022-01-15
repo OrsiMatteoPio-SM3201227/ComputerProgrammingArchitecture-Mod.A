@@ -1,0 +1,1 @@
+// Si scriva una funziona che legga un array di interi di dimensione fissata, lo inverta e lo stampi. Nota: l’inversione deve essere esplicita, non basta stampare l’array in senso inverso (i.e., dagli ultimi ai primi elementi).
