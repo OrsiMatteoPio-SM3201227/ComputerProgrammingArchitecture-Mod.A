@@ -24,7 +24,7 @@ float avg(int a[], int n);
 // ==============================
 int main(void)
 {
-    // Dichiarazione della variabile per l'allocazione dinamica di un array di interi
+    // Dichiarazione della variabile dimensione e allocazione dinamica di un array di interi
     int dimensione;
 
     printf("Inserire il valore della dimensione dell'array: ");
@@ -34,12 +34,14 @@ int main(void)
 
     for(int i = 0; i < dimensione; i = i + 1)
     {
-        printf("Inserire il %d numero intero dell'array d'indice %d: ", i + 1, i);
+        printf("Inserire il %d° numero intero nella posizione d'indice %d dell'array: ", i + 1, i);
         scanf("%d", &a[i]);
     }
 
+    // Richiamo della funzione varianza
     printf("La varianza dell'array è: %f\n", var(a, dimensione));
 
+    // Pulizia dell'heap
     free(a);
 }
 
