@@ -9,7 +9,7 @@
 // ==============================
 //           FUNZIONI
 // ==============================
-//     Inversione dell'array
+//          Inversione
 // ==============================
 int * inversione_array(int a[], int dimensione);
 
@@ -48,16 +48,13 @@ int main(void)
 // ==============================
 int * inversione_array(int a[], int dimensione)
 {
-    int * array_invertito = malloc(sizeof(int) * dimensione);
+    int variabile_temporanea;
 
-    for(int i = 0; i < dimensione; i = i + 1)
+    for(int i = 0; i < (dimensione / 2.0); i = i + 1)
     {
-        array_invertito[i] = a[(dimensione - 1) - i];
-        printf("L'elemento nella posizione d'indice %d dell'array è: %d. L'elemento nella posizione d'indice %d dell'array invertito è: %d\n", i, a[i], i, array_invertito[i]);
+        variabile_temporanea = a[i];
+        a[i] = a[(dimensione - 1) - i];
+        a[(dimensione - 1) - i] = variabile_temporanea;
     }
-
-    // Pulizia dell'heap
-    free(array_invertito);
-
-    return array_invertito;
+    return a;
 }
