@@ -7,7 +7,7 @@ int parola_palindroma(char *s);
 // --- PROGRAMMA PRINCIPALE ---
 int main(int arg, char **argv)
 {
-   char s[5]={'a', 'n', 'n', 'o'};
+   char s[5]={'a', 'n', 'n', 'a'};
 
    printf("La lunghezza della stringa è: %d\n", lunghezza(s, 0));
    if(parola_palindroma(s)==1)

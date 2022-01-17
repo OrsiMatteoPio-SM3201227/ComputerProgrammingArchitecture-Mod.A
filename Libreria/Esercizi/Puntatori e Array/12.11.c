@@ -20,7 +20,7 @@ char * stringa_di_stringhe(char stringa1[], char stringa2[], int dimensione_stri
 // ==============================
 int main(void)
 {
-    // Dichiarazione della variabile dimensione e allocazione dinamica di un array di interi
+    // Dichiarazione delle variabili dimensione e allocazione dinamica di array
     int dimensione_stringa1, dimensione_stringa2, dimensione;
 
     printf("Inserire il valore della dimensione del primo array di stringhe: ");
@@ -34,23 +34,10 @@ int main(void)
     char * stringa2 = malloc(sizeof(char) * dimensione_stringa2);
     char * stringa = malloc(sizeof(char) * dimensione);
 
-    for(int i = 0; i < dimensione_stringa1; i = i + 1)
-    {
-        if(i == 0)
-        {
-            printf("Inserire la prima stringa: ");
-        }
-        scanf("%c", &stringa1[i]);
-    }
-
-    for(int i = 0; i < dimensione_stringa2; i = i + 1)
-    {
-        if(i == 0)
-        {
-            printf("Inserire la seconda stringa: ");
-        }
-        scanf("%c", &stringa2[i]);
-    }
+    printf("Inserire la prima stringa: ");
+    scanf("%s", stringa1);
+    printf("Inserire la seconda stringa: ");
+    scanf("%s", stringa2);
 
     // Richiamo della funzione array stringa di due stringhe
     stringa = stringa_di_stringhe(stringa1, stringa2, dimensione_stringa1, dimensione_stringa2, dimensione);
@@ -80,6 +67,9 @@ char * stringa_di_stringhe(char stringa1[], char stringa2[], int dimensione_stri
         }
     }
 
+    stringa[i] = ' ';
+    i = i + 1;
+    
     for( j = 0; stringa2[j] != '\0'; j = j + 1)
     {
         if(stringa2[j] != '\n')
