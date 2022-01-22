@@ -130,6 +130,7 @@ int main(void)
     // Richiamo della funzione eliminare elemento in coda
     cancC(&lista);
     // Richiamo della funzione scambiare i primi due elementi
+    scambiaprimidue(&lista);
     // Richiamo della funzione stampa
     stampalista(lista);
 
@@ -198,7 +199,7 @@ int ord(ListaDiElementi l)
     // Dichiarazione di una variabile di controllo: 0 se non è ordinata in modo decrescente, 1 se è ordinata in modo decrescente
     int ordinato = 1;
 
-    while((*l).next != NULL && ordinato)
+    while((* l).next != NULL && ordinato)
     {
         if((* l).info < (* l).next -> info)
         {
@@ -221,8 +222,17 @@ int ord(ListaDiElementi l)
 // ==============================
 void inserire_mezzo(ListaDiElementi * l, int x, int v)
 {
+    ListaDiElementi corr = * l;
+    
     ListaDiElementi new = malloc(sizeof(ElementoDiLista));
     (* new).info = v;
+
+    while(corr -> next -> info != x)
+    {
+        corr = corr -> next;
+    }
+    new -> next = corr -> next;
+    corr -> next = new;
 }
 // ==============================
 //  Eliminare elemento in testa
@@ -251,7 +261,13 @@ void cancC(ListaDiElementi * l)
 // ==============================
 void scambiaprimidue(ListaDiElementi * l)
 {
+    ListaDiElementi head = * l;
+    
+    int first_number_info = head -> info;
+    int second_number_info = head -> next -> info;
 
+    head -> info = second_number_info;
+    head -> next -> info = first_number_info;
 }
 // ==============================
 //            Stampa
