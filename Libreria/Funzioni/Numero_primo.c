@@ -96,9 +96,9 @@ void numeroprimo_ricorsivo(int numero, int divisore)
             {
                 printf("Il numero %d non è un numero primo\n", numero);
             }
-            else if(numero % ((2 * divisore)+1) != 0)
+            else if(numero % ((2 * divisore) + 1) != 0)
             {
-                numeroprimo_ricorsivo(numero, divisore +1);
+                numeroprimo_ricorsivo(numero, divisore + 1);
             }
             else
             {
