@@ -182,7 +182,7 @@ void addC(ListaDiElementi * l, int x)
 // ==============================
 int length(ListaDiElementi l)
 {
-    if(l==NULL)
+    if(l == NULL)
     {
         return 0;
     }

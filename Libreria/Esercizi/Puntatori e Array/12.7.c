@@ -12,6 +12,11 @@
 //      Ordinamento crescente
 // ==============================
 float * ordinamento_crescente_array(float a[], int dimensione);
+// ==============================
+// Ordinamento crescente ricorsivo
+// ==============================
+int min(float * a, int n, int i);
+void ordinamento_crescente_ricorsivo_array(float * a, int n, int i);
 
 // ==============================
 //           PROGRAMMA
@@ -35,11 +40,11 @@ int main(void)
     }
 
     // Richiamo della funzione ordinamento crescente dell'array e salvataggio dell'array ordinato in maniera crescente
-    float * array_ordinato = ordinamento_crescente_array(a, dimensione);
+    ordinamento_crescente_ricorsivo_array(a, dimensione, 0);
 
     for(int k = 0; k < dimensione; k = k + 1)
     {
-        printf("L'elemento nella posizione d'indice %d dell'array ordinato è: %f\n", k, array_ordinato[k]);
+        printf("L'elemento nella posizione d'indice %d dell'array ordinato è: %f\n", k, a[k]);
     }
 
     // Pulizia dell'heap
@@ -49,9 +54,9 @@ int main(void)
 // ==============================
 //           FUNZIONI
 // ==============================
-//      Ordinamento crescente
+// Ordinamento crescente iterativo
 // ==============================
-float * ordinamento_crescente_array(float a[], int dimensione)
+float * ordinamento_crescente_iterativo_array(float a[], int dimensione)
 {
     int indice;
     int variabile_temporanea;
@@ -71,4 +76,32 @@ float * ordinamento_crescente_array(float a[], int dimensione)
         a[i] = variabile_temporanea;
     }
     return a;
+}
+// ==============================
+// Ordinamento crescente ricorsivo
+// ==============================
+int min(float * a, int n, int i)
+{
+    int indice_di_partenza = i;
+    
+    for(int indice = indice_di_partenza; indice < n; indice = indice + 1)
+    {
+        if(a[indice] <= a[indice_di_partenza])
+        {
+            indice_di_partenza = indice;
+        }
+    }
+    return indice_di_partenza;
+}
+
+void ordinamento_crescente_ricorsivo_array(float * a, int n, int i)
+{
+    if(i < n)
+    {
+        float variabile_temporanea = a[i];
+        int indice_elemento_minore = min(a, n, i);
+        a[i] = a[indice_elemento_minore];
+        a[indice_elemento_minore] = variabile_temporanea;
+        return ordinamento_crescente_ricorsivo_array(a, n, (i + 1));
+    }
 }
